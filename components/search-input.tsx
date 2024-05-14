@@ -55,7 +55,7 @@ export const SearchInput = () => {
       <Input
         onChange={(e) => setValue(e.target.value)}
         value={value}
-        className="w-full  pl-9 rounded-md bg-slate-50"
+        className="w-full  pl-9 rounded-md"
         placeholder="Pesquise por um projeto"
       />
     </div>
