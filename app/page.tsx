@@ -1,18 +1,16 @@
-import { SearchInput } from "@/components/search-input";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-
-export default function Home() {
+interface SearchPageProps {
+  searchParams: {
+    title: string;
+    categoryId: string;
+  }
+};
+const SearchPage = async({
+  searchParams
+}: SearchPageProps)=> {
   return (
-    <>
-      
-
-    </>
+    <div>
+      {searchParams.title}
+    </div>
   );
 }
+export default SearchPage;

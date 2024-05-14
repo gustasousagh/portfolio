@@ -33,6 +33,7 @@ export const SearchInput = () => {
     router.push(url);
   }, [debouncedValue, currentCategoryId, router, pathname])
 
+
   return (
     
     <Sheet>

@@ -14,7 +14,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  
+}: Readonly <{
+  
   children: React.ReactNode;
 }>) {
   return (
@@ -26,7 +28,7 @@ export default function RootLayout({
             enableSystem
           >
         <MaxWidth>
-          <Navbar/>
+          <Navbar />
           {children}
         </MaxWidth>
         </ThemeProvider>
