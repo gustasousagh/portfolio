@@ -3,14 +3,15 @@ interface SearchPageProps {
     title: string;
     categoryId: string;
   }
-};
-const SearchPage = async({
-  searchParams
-}: SearchPageProps)=> {
-  return (
-    <div>
-      {searchParams.title}
-    </div>
-  );
 }
-export default SearchPage;
+  
+  const Page = ({
+    searchParams
+  }: SearchPageProps) =>{
+  return (
+    <>
+    {searchParams.title}
+    </>
+  )
+}
+export default Page;

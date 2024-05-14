@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MaxWidth from "@/components/width";
-import Navbar from "@/components/nav-bar";
+import {Navbar} from "@/components/nav-bar";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ept-br">
+    <html lang="pt-br">
       <body className={inter.className}>
       <ThemeProvider 
             attribute="class" 
@@ -28,6 +28,7 @@ export default function RootLayout({
             enableSystem
           >
         <MaxWidth>
+          
           <Navbar />
           {children}
         </MaxWidth>

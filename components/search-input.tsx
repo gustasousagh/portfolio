@@ -33,10 +33,8 @@ export const SearchInput = () => {
     router.push(url);
   }, [debouncedValue, currentCategoryId, router, pathname])
 
-
   return (
-    
-    <Sheet>
+  <Sheet>
   <SheetTrigger className="p-0">
   <Button
   asChild
@@ -47,7 +45,7 @@ export const SearchInput = () => {
     </Button>
   </SheetTrigger>
   
-  <SheetContent className="p-1" side={"top"}>
+  <SheetContent className="p-0 pt-2" side={"top"}>
     <MaxWidth>
     <div className="relative">
       <Search
@@ -61,6 +59,7 @@ export const SearchInput = () => {
       />
     </div>
    </MaxWidth>
+   
   </SheetContent>
   
     
