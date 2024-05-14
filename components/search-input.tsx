@@ -7,6 +7,9 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation";
 
 import { Input } from "@/components/ui/input";
 import { useDebounce } from "@/hooks/use-debounce";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
+import { Button } from "./ui/button";
+import MaxWidth from "./width";
 
 export const SearchInput = () => {
   const [value, setValue] = useState("")
@@ -31,6 +34,20 @@ export const SearchInput = () => {
   }, [debouncedValue, currentCategoryId, router, pathname])
 
   return (
+    
+    <Sheet>
+  <SheetTrigger className="p-0">
+  <Button
+  asChild
+    variant={"outline"}
+    size={"icon"}
+    >
+      <Search className="p-2"/>
+    </Button>
+  </SheetTrigger>
+  
+  <SheetContent className="p-1" side={"top"}>
+    <MaxWidth>
     <div className="relative">
       <Search
         className="h-4 w-4 absolute top-3 left-3 text-slate-600"
@@ -38,9 +55,15 @@ export const SearchInput = () => {
       <Input
         onChange={(e) => setValue(e.target.value)}
         value={value}
-        className="w-full md:w-[300px] pl-9 rounded-md bg-slate-50 focus-visible:ring-slate-200"
+        className="w-full  pl-9 rounded-md bg-slate-50"
         placeholder="Pesquise por um projeto"
       />
     </div>
+   </MaxWidth>
+  </SheetContent>
+  
+    
+    </Sheet>
+    
   )
 }
